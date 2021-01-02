@@ -1,6 +1,4 @@
-# This is my Progect "Webinfo"
-def print_hi(name):
-    print(f'Hi, {name}')
+from modules import witget
 
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    witget.start()
