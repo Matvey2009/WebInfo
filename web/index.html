@@ -3,99 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <title>WebInfo</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <script src="eel.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/normalize.css">
 </head>
 <body>
-  <p style="text-align: center"><button>Don't push me</button>
-<div class="black"></div>
-<button style="text-align: center">Кнопка справа врёт</button>
-<button style="text-align: right">Кнопка справа говорит правду</button>
-<button style="text-align: center">Первая кнопка лжёт</button>
-<div>
-  <input type="range" name="volume"
-         min="0" max="100">
-  <label for="volume"></label>
-    <p>Select item color:</p>
-<div>
-    <input type="color" name="color1" value="#ff0000">
-    <label for="color1">Color 1</label>
-</div>
-<div>
-    <input type="color" name="color2" value="#f6b73c">
-     <label for="color2">Color 2</label>
-</div>
-</div>
-
-    <form id="nubexForm" action="do.php">
-    </form>
-
-    <select name="nubexSelect" size="3" multiple form="nubexForm">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-    </select>
-
-<div class="canvas">
-  <div class="tree">
-    <div class="trunk">
-      <div class="branch">
-        <div class="leaf"></div>
-        <div class="leaf"></div>
-        <div class="leaf"></div>
-        <div class="leaf"></div>
-        <div class="leaf"></div>
-        <div class="leaf"></div>
-        <div class="leaf"></div>
-      </div>
-      <div class="branch">
-        <div class="leaf"></div>
-        <div class="leaf"></div>
-        <div class="leaf"></div>
-        <div class="leaf"></div>
-        <div class="leaf"></div>
-        <div class="leaf"></div>
-      </div>
-      <div class="branch">
-        <div class="leaf"></div>
-        <div class="leaf"></div>
-        <div class="leaf"></div>
-        <div class="leaf"></div>
-        <div class="leaf"></div>
-        <div class="leaf"></div>
-      </div>
-      <div class="branch">
-        <div class="leaf"></div>
-        <div class="leaf"></div>
-        <div class="leaf"></div>
-        <div class="leaf"></div>
-        <div class="leaf"></div>
-      </div>
-      <div class="branch">
-        <div class="leaf"></div>
-        <div class="leaf"></div>
-        <div class="leaf"></div>
-        <div class="leaf"></div>
-        <div class="leaf"></div>
-      </div>
-      <div class="branch">
-        <div class="leaf"></div>
-        <div class="leaf"></div>
-        <div class="leaf"></div>
-      </div>
-      <div class="branch">
-        <div class="leaf"></div>
-        <div class="leaf"></div>
-        <div class="leaf"></div>
-      </div>
-      <div class="branch">
-        <div class="leaf"></div>
-      </div>
+    <div class="top">
+        <h1>Hi!</h1>
     </div>
-  </div>
-</div>
+    <div class="row">
+        <a href="" class="sliding-button">Button1</a>
+        <a href="" class="sliding-button">Button2</a>
+        <a href="" class="sliding-button">Button3</a>
+    </div>
+    <div class="cont">
+        <div class="col-left">
+            <a href="" class="sliding-button">Button4</a>
+            <a href="" class="sliding-button">Button5</a>
+        </div>
+        <div class="col-center">
 
+        </div>
+        <div class="col-right">
+            <a href="" class="sliding-button">Button6</a>
+            <a href="" class="sliding-button">Button7</a>
+        </div>
+    </div>
+    <div class="row">
+        <a href="" class="sliding-button">Button8</a>
+        <a href="" class="sliding-button">Button9</a>
+        <a href="" class="sliding-button">Button10</a>
+    </div>
 </body>
+    <script>
+        //Отправка сообщения из сайта в пайтон
+        async function call() {
+            await eel.call_in_js("hi");
+        }
+        call();
+    </script>
 </html>
