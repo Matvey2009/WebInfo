@@ -1,3 +1,7 @@
+# Pytan + WebInfo
+
+__author__ = 'Матвей'
+
 from modules import witget
 
 if __name__ == '__main__':

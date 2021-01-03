@@ -2,19 +2,45 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel = "stylesheet" href = "style.css">
-    <script src = "eel.js"></script>
+    <title>WebInfo</title>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel = "stylesheet" href = "style.css">
+    <link rel = "stylesheet" href = "css/normalize.css">
+    <script src = "eel.js"></script>
 </head>
 <body>
-<button type="submit">Морфиус!?</button>
-<hr>
-<button type="submit">Что Нео?</button>
-<hr>
-<button type="submit">Возращая меня из Матрицы!</button>
-<hr>
-<button type="submit">Секунду.</button>
-<hr>
+    <div class='top'>
+        <h1>Hi world</h1>
+    </div>
+    <div class='row'>
+        <a href="" class="button-5"><span class="link-content">1 Кнопка</span></a>
+        <a href="" class="button-5"><span class="link-content">2 Кнопка</span></a>
+        <a href="" class="button-5"><span class="link-content">3 Кнопка</span></a>
+    </div>
+    <div class='cont'>
+        <div class='col-left'>
+        <a href="" class="button-5"><span class="link-content">4 Кнопка</span></a>
+        <a href="" class="button-5"><span class="link-content">5 Кнопка</span></a>
+        </div>
+        <div class='col-center'>
+
+        </div>
+        <div class='col-right'>
+        <a href="" class="button-5"><span class="link-content">6 Кнопка</span></a>
+        <a href="" class="button-5"><span class="link-content">7 Кнопка</span></a>
+        </div>
+    </div>
+    <div class='row'>
+        <a href="" class="button-5"><span class="link-content">8 Кнопка</span></a>
+        <a href="" class="button-5"><span class="link-content">9 Кнопка</span></a>
+        <a href="" class="button-5"><span class="link-content">10 Кнопка</span></a>
+    </div>
 </body>
+    <script>
+        // Отправка сообщения с сайтав pyton
+        async function call() {
+            await eel.call_in_js('Hi');
+        }
+        call();
+    </script>
 </html>
