@@ -1,12 +1,13 @@
 body {
     background-image: url(img/fon.jpg);
+    background-size: cover;
 }
 
 /* БЛОКИ */
 .top {
     height: 70px;
     text-align: center;
-    color: white;
+    color: black;
     border: solid 1px red; //УДАЛИТЬ
 }
 
@@ -18,37 +19,37 @@ body {
 
 .cont {
     display: flex;
-    height: auto;
+    height: 700px;
     text-align: center;
     border: solid 1px yellow; //УДАЛИТЬ
 }
 
 .col-left {
-    width: 25%;
+    width: 20%;
     text-align: center;
     border: solid 1px green; //УДАЛИТЬ
 }
 
 .col-center {
-    width: 50%;
+    width: 80%;
     text-align: center;
     border: solid 1px purple; //УДАЛИТЬ
 }
 
 .col-right {
-    width: 25%;
+    width: 20%;
     text-align: center;
     border: solid 1px pink; //УДАЛИТЬ
 }
 /* КНОПКИ */
 .sliding-button {
   text-decoration: none;
-  color: white;
+  color: black;
   display: inline-block;
   position: relative;
   padding: 15px 30px;
   border: 1px solid;
-  border-image: linear-gradient(180deg, #ff3000, #ed0200, #ff096c, #d50082);
+  border-image: linear-gradient(180deg, white, blue, red);
   border-image-slice: 1;
   margin: 10px 20px;
   font-family: 'Montserrat', sans-serif;
@@ -66,7 +67,7 @@ body {
   width: 100%;
   z-index: -1;
   color: white;
-  background: linear-gradient(180deg, #ff3000, #ed0200, #ff096c, #d50082);
+  background: linear-gradient(180deg, white, blue, red);
   transition: .8s cubic-bezier(.165, .84, .44, 1);
 }
 .sliding-button:hover {

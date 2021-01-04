@@ -10,37 +10,43 @@
 </head>
 <body>
     <div class="top">
-        <h1>Hi!</h1>
+        <h1>Вы упали в 10 митровую яму, ваши действия:</h1>
     </div>
     <div class="row">
-        <a href="" class="sliding-button">Button1</a>
-        <a href="" class="sliding-button">Button2</a>
-        <a href="" class="sliding-button">Button3</a>
+        <a onclick="call('Вы сдались и вскоре умерли от голода')" class="sliding-button">Сдаться</a>
+        <a onclick="call('Вы отравились землёй и умерли')" class="sliding-button">Питаться землёй</a>
+        <a onclick="call('Вы побежали по стене, но гравитация дала о себе знать, Вы умерли от падания')" class="sliding-button">Пробежаться верх, как по сперали</a>
     </div>
     <div class="cont">
         <div class="col-left">
-            <a href="" class="sliding-button">Button4</a>
-            <a href="" class="sliding-button">Button5</a>
+            <a onclick="call('Вы вдохновились актёр из боевика и полезли по стене, но вы не актёр из фильма, Вы умерли')" class="sliding-button">Вскарапкаться</a>
+            <a onclick="call('Вы не дожались помощи, Вы умерли от голода')" class="sliding-button">Ждать помощи</a>
         </div>
         <div class="col-center">
 
         </div>
         <div class="col-right">
-            <a href="" class="sliding-button">Button6</a>
-            <a href="" class="sliding-button">Button7</a>
+            <a onclick="call('На ваш крик пришли людоеды, вас съели, Вы умерли')" class="sliding-button">Кричать</a>
+            <a onclick="call('Вы протянули руку что бы кинуть крбк-кошку, но у вас не крюка кашки и Вы умерли')" class="sliding-button">Воспользоватся крюком-кошкой</a>
         </div>
     </div>
     <div class="row">
-        <a href="" class="sliding-button">Button8</a>
-        <a href="" class="sliding-button">Button9</a>
-        <a href="" class="sliding-button">Button10</a>
+        <a onclick="call('Вы придумали как выбратся, но вам надо телефон, фонарик, кирка, связь, работа в полиции, крюк-кошка а так же самолёт, но у вас не получилось так как у вас нет фонарикаь, Вы умерли')" class="sliding-button">Думать</a>
+        <a onclick="call('УРА! У ВАС ПОЛУИЛОСЬ! Вы умерли')" class="sliding-button">Попытатя умереть</a>
+        <a onclick="call('Вы нашли Iphene 11 на дне ямы что бы позвонить маме, но вы не знаете номер телефона мамы, Вы умерли')" class="sliding-button">Позвонить маме</a>
     </div>
 </body>
     <script>
         //Отправка сообщения из сайта в пайтон
-        async function call() {
-            await eel.call_in_js("hi");
+        async function call(msg) {
+            await eel.call_in_js(msg);
         }
-        call();
+
+        //Приём сообщения из пайтона
+        eel.expose(call_in_python);
+        function call_in_python(msg) {
+            console.log(msg);
+            alert(msg);
+        }
     </script>
 </html>
