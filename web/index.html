@@ -13,34 +13,40 @@
         <h1>Hi world</h1>
     </div>
     <div class='row'>
-        <a href="" class="button-5"><span class="link-content">1 Кнопка</span></a>
-        <a href="" class="button-5"><span class="link-content">2 Кнопка</span></a>
-        <a href="" class="button-5"><span class="link-content">3 Кнопка</span></a>
+        <a onclick="call('Мы вам не разрешаем выходить с этого сайта!')" class="button-5"><span class="link-content">Выход</span></a>
+        <a onclick="call('К сожелению здесь нет что можно было настроить(ведь дизайн идеален)')" class="button-5"><span class="link-content">Настройки</span></a>
+        <a onclick="call('Нажата кнопка 3')" class="button-5"><span class="link-content">3 Кнопка</span></a>
     </div>
     <div class='cont'>
         <div class='col-left'>
-        <a href="" class="button-5"><span class="link-content">4 Кнопка</span></a>
-        <a href="" class="button-5"><span class="link-content">5 Кнопка</span></a>
+        <a onclick="call('Нажата кнопка 4')" class="button-5"><span class="link-content">4 Кнопка</span></a>
+        <a onclick="call('Нажата кнопка 5')" class="button-5"><span class="link-content">5 Кнопка</span></a>
         </div>
         <div class='col-center'>
 
         </div>
         <div class='col-right'>
-        <a href="" class="button-5"><span class="link-content">6 Кнопка</span></a>
-        <a href="" class="button-5"><span class="link-content">7 Кнопка</span></a>
+        <a onclick="call('Нажата кнопка 6')" class="button-5"><span class="link-content">6 Кнопка</span></a>
+        <a onclick="call('Нажата кнопка 7')" class="button-5"><span class="link-content">7 Кнопка</span></a>
         </div>
     </div>
     <div class='row'>
-        <a href="" class="button-5"><span class="link-content">8 Кнопка</span></a>
-        <a href="" class="button-5"><span class="link-content">9 Кнопка</span></a>
-        <a href="" class="button-5"><span class="link-content">10 Кнопка</span></a>
+        <a onclick="call('Нажата кнопка 8')" class="button-5"><span class="link-content">8 Кнопка</span></a>
+        <a onclick="call('Нажата кнопка 9')" class="button-5"><span class="link-content">9 Кнопка</span></a>
+        <a onclick="call('Нажата кнопка 10')" class="button-5"><span class="link-content">10 Кнопка</span></a>
     </div>
 </body>
     <script>
-        // Отправка сообщения с сайтав pyton
-        async function call() {
-            await eel.call_in_js('Hi');
+        // Отправка сообщения на сайтав python
+        async function call(msg) {
+            await eel.call_in_js(msg);
         }
-        call();
+
+        // Приём сообщений из python
+        eel.expose(call_in_python);
+        function call_in_python(msg){
+            console.log(msg);
+            alert(msg);
+        }
     </script>
 </html>

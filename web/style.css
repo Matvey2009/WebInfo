@@ -1,43 +1,45 @@
 body {
     background-image: url(img/fon.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: calc(100vh - 26px);
+    wight: 100%;
+}
+
+h1{
+    color: white;
 }
 
 /* Блоки */
 .top {
-    height: 70px;
+    height: 50px;
     text-align: center;
-    color: white;
-    border: dashed 1px red; //Удалить
 }
 
 .row {
     height: 70px;
     text-align: center;
-    border: dashed 1px blue; //Удалить
 }
 
 .cont {
     height: auto;
     display: flex;
-    border: dashed 1px green; //Удалить
 }
 
 .col-left {
     width: 30%;
     text-align: center;
-    border: dashed 1px yellow; //Удалить
 }
 
 .col-center {
     width: 40%;
     text-align: center;
-    border: dashed 1px pink; //Удалить
 }
 
 .col-right {
     width: 30%;
     text-align: center;
-    border: dashed 1px white; //Удалить
 }
 
 /* Кнопки */
@@ -52,6 +54,7 @@ body {
     font-weight: 700;
     white-space: nowrap;
     transition: .3s linear;
+    margin: 10px;
 }
 .button-5:before, .button-5:after, .link-content:before, .link-content:after {
     content: "";
