@@ -3,6 +3,10 @@ body {
     background-size: cover;
 }
 
+p {
+    color: white
+}
+
 /* БЛОКИ */
 .top {
     height: 70px;
