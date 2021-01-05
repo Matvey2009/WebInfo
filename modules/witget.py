@@ -1,4 +1,5 @@
 import eel
+import os
 
 def start():
     eel.init("web")
@@ -6,7 +7,12 @@ def start():
     # Приём сообщения с сайта
     @eel.expose
     def call_in_js(msg):
-        print(msg)
+        if msg == 'quit':
+            os.system("TASKKILL /F /IM Chrome.exe")
+            quit()
+        elif msg.isdigit():
+            msg = int(msg)*int(msg)
+
         call_in_python(msg)
 
     # Отправка сообщения на сайт
