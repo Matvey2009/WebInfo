@@ -6,16 +6,34 @@ def start():
 
     #Приём сообщения с сайта
     @eel.expose
-    def call_in_js(msg):
-        if msg == 'quit':
+    def call_in_js(msg_in):
+        if msg_in == 'quit':
             os.system("TASKKILL /F /IM Chrome.exe")
             quit()
-        elif msg.isdigit():
-            msg = int(msg)*int(msg)
-        call_in_python(msg)
+        elif msg_in == 'calk':
+            msg_out = ""
+            os.system("C:\Windows\System32\calc1.exe")
+            os.system("TASKKILL /F /IM Chrome.exe")
+        elif msg_in == 'CT':
+            msg_out = ""
+            os.system("D:\Documents\Programs\BATch\ClearTemp.bat")
+            os.system("TASKKILL /F /IM Chrome.exe")
+        elif msg_in == 'CL':
+            msg_out = ""
+            os.system("C:/Users/Nikita/Desktop/AutoClicker.exe")
+            os.system("TASKKILL /F /IM Chrome.exe")
+        elif msg_in == 'MCL':
+            msg_out = ""
+            os.system("D:\Documents\Programs\ProjectsFollowers\AuxProg\dist\AuxProg.exe")
+            os.system("TASKKILL /F /IM Chrome.exe")
+        elif msg_in == 'Ban':
+            msg_out = ""
+            os.system("C:/Users/Nikita/AppData/Local/Programs/Opera/auncher.exe")
+            os.system("TASKKILL /F /IM Chrome.exe")
+        call_in_python(msg_out)
 
     #Отправка сообщения из пайтон в сайт
-    def call_in_python(msg):
-        eel.call_in_python(msg)
+    def call_in_python(msg_out):
+        eel.call_in_python(msg_out)
 
-    eel.start("index.html", mode="chrome", size=(1300, 1000))
+    eel.start("index.html", mode="chrome", size=(500, 390))
