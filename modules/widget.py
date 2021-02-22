@@ -28,7 +28,7 @@ def start():
             os.system("TASKKILL /F /IM Chrome.exe")
         elif msg_in == 'Ban':
             msg_out = ""
-            os.system("C:/Users/Nikita/AppData/Local/Programs/Opera/auncher.exe")
+            os.system("C:/Users/Nikita/AppData/Local/Programs/Opera/launcher.exe")
             os.system("TASKKILL /F /IM Chrome.exe")
         call_in_python(msg_out)
 
@@ -36,4 +36,4 @@ def start():
     def call_in_python(msg_out):
         eel.call_in_python(msg_out)
 
-    eel.start("index.html", mode="chrome", size=(500, 390))
+    eel.start("index.html", mode="chrome", size=(750, 360))

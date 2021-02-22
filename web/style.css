@@ -4,7 +4,11 @@ body {
 }
 
 p {
-    color: white
+    color: white;
+}
+
+b {
+    color: red;
 }
 
 /* БЛОКИ */
@@ -40,39 +44,38 @@ p {
     text-align: center;
 }
 /* КНОПКИ */
-.sliding-button {
-  text-decoration: none;
-  color: black;
-  display: inline-block;
-  position: relative;
-  padding: 15px 30px;
-  border: 1px solid;
-  border-image: linear-gradient(180deg, white, blue, red);
-  border-image-slice: 1;
-  margin: 10px 20px;
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
-  overflow: hidden;
-  letter-spacing: 2px;
-  transition: .8s cubic-bezier(.165, .84, .44, 1);
+.sliding-button{
+  display:inline-block;
+  position:relative;
+  padding:10px 20px;
+  border:2px solid #fda;
+  color:#fda;
+  font-family:'Dancing Script',serif;
+  font-style:italic;
+  font-size:30px;
+  text-decoration:none;
+  margin:20px auto;
+  transition: color 0.4s
 }
-.sliding-button:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 0;
-  width: 100%;
-  z-index: -1;
-  color: white;
-  background: linear-gradient(180deg, white, blue, red);
-  transition: .8s cubic-bezier(.165, .84, .44, 1);
+.sliding-button:after{
+  content:" ";
+  border:2px solid rgba(0,0,0,0);
+  display:inline-block;
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  margin:auto;
+  transition:all 0.4s;
 }
-.sliding-button:hover {
-  background: rgba(255, 255, 255, 0);
+.sliding-button:hover{
+  color:#eee
 }
-.sliding-button:hover:before {
-  bottom: 0%;
-  top: auto;
-  height: 100%;
+.sliding-button:hover:after{
+  border:2px solid #fda;
+  width: calc(100% - 10px);
+  height: calc(100% + 10px);
 }
