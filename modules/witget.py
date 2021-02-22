@@ -17,7 +17,7 @@ def start():
             os.system('F:/SOFT/Office/Калькулятор.exe')
         elif msg_in == "paint":
             msg_out = "Запуск Paint"
-            os.system('C:/Windows/system32/mspaint.exe')#pLan_openvpn.exe
+            os.system('C:/Windows/system32/mspaint.exe')#
         elif msg_in == "opera":
             msg_out = "Запуск Opera"
             os.system('C:/Users/Администратор/AppData/Local/Programs/Opera/launcher.exe')
@@ -30,7 +30,15 @@ def start():
         elif msg_in == "dis":
             msg_out = "Запуск pLan_openvpn"
             os.system('C:/Users/Администратор/AppData/Local/Discord/app-0.0.309/pLan_openvpn.exe')
-
+        elif msg_in == "wind":
+            msg_out = "Запуск VPN"
+            os.system('D:/Games/Windscribe/WindscribeLauncher.exe')
+        elif msg_in == "gh":
+            msg_out = "Запуск GitHub"
+            os.system('C:/Users/Администратор/AppData/Local/GitHubDesktop/GitHubDesktop.exe')
+        elif msg_in == "main":
+            msg_out = "Запуск Minecraft"
+            os.system('C:/Users/Администратор/AppData/Roaming/.minecraft/TLauncher.exe')
         else:
             msg_out = msg_in[::-1]
         call_in_python(msg_out)

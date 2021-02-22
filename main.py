@@ -1,4 +1,4 @@
-# Pytan + WebInfo
+# Python + WebInfo
 
 __author__ = 'Матвей'
 
